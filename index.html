@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café da Esquina - Cafeteria Artesanal</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --marrom-escuro: #3b2417;
+      --marrom-medio: #6f4e37;
+      --creme: #f5e9da;
+      --bege: #ecd9c0;
+      --laranja-queimado: #c9762f;
+      --branco: #fff8f0;
+    }
+
+    body {
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      color: var(--marrom-escuro);
+      background-color: var(--branco);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background-color: var(--marrom-escuro);
+      color: var(--creme);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: var(--bege);
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background-color: var(--laranja-queimado);
+      color: var(--branco);
+      padding: 14px 32px;
+      border-radius: 30px;
+      border: none;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-cta:hover {
+      background-color: #a8611f;
+      transform: scale(1.05);
+    }
+
+    .sobre {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .sobre h2 {
+      font-size: 2rem;
+      color: var(--marrom-medio);
+      margin-bottom: 20px;
+    }
+
+    .sobre p {
+      font-size: 1.1rem;
+    }
+
+    .cardapio {
+      background-color: var(--creme);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .cardapio h2 {
+      font-size: 2rem;
+      color: var(--marrom-medio);
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: var(--branco);
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: var(--laranja-queimado);
+      margin-bottom: 10px;
+    }
+
+    .diferenciais {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .diferenciais h2 {
+      font-size: 2rem;
+      color: var(--marrom-medio);
+      margin-bottom: 40px;
+    }
+
+    .lista-diferenciais {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      text-align: left;
+    }
+
+    .item-diferencial {
+      background-color: var(--bege);
+      padding: 20px;
+      border-left: 5px solid var(--laranja-queimado);
+      border-radius: 8px;
+    }
+
+    .contato {
+      background-color: var(--marrom-medio);
+      color: var(--creme);
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .contato h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .info-contato {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .cta-final {
+      background-color: var(--laranja-queimado);
+      color: var(--branco);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .cta-final h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    .btn-cta-branco {
+      display: inline-block;
+      background-color: var(--branco);
+      color: var(--laranja-queimado);
+      padding: 14px 32px;
+      border-radius: 30px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-cta-branco:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--marrom-escuro);
+      color: var(--bege);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .lista-diferenciais {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>☕ Café da Esquina</h1>
+    <p>Café fresco, ambiente acolhedor e o cheirinho que todo bairro merece.</p>
+    <button class="btn-cta">Ver Localização</button>
+  </header>
+
+  <section class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      O Café da Esquina nasceu da vontade de criar um espaço simples e gostoso
+      para quem mora ou trabalha por aqui. Trabalhamos com grãos selecionados,
+      receitas caseiras e aquele atendimento de quem conhece o cliente pelo nome.
+      Seja para um café rápido antes do trabalho ou uma tarde tranquila com amigos,
+      esse é o seu lugar.
+    </p>
+  </section>
+
+  <section class="cardapio">
+    <h2>Nosso Cardápio</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">☕</div>
+        <h3>Cafés Especiais</h3>
+        <p>Expresso, cappuccino, latte e cold brew, feitos com grãos torrados na região.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🥐</div>
+        <h3>Padaria Artesanal</h3>
+        <p>Pães, croissants e bolos frescos, preparados todas as manhãs.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🍰</div>
+        <h3>Doces da Casa</h3>
+        <p>Tortas e sobremesas com receitas de família, sem conservantes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="diferenciais">
+    <h2>Por que vir ao Café da Esquina?</h2>
+    <div class="lista-diferenciais">
+      <div class="item-diferencial">
+        <strong>Grãos locais</strong><br>
+        Compramos de produtores da região para garantir frescor.
+      </div>
+      <div class="item-diferencial">
+        <strong>Wi-Fi grátis</strong><br>
+        Ótimo lugar para estudar ou trabalhar com calma.
+      </div>
+      <div class="item-diferencial">
+        <strong>Ambiente pet friendly</strong><br>
+        Seu pet também é bem-vindo aqui.
+      </div>
+      <div class="item-diferencial">
+        <strong>Preço justo</strong><br>
+        Qualidade sem pesar no bolso.
+      </div>
+    </div>
+  </section>
+
+  <section class="contato">
+    <h2>Onde Estamos</h2>
+    <p class="info-contato">📍 Rua das Flores, 123 - Centro, Campinas - SP</p>
+    <p class="info-contato">🕒 Aberto de Segunda a Sábado, das 7h às 19h</p>
+    <p class="info-contato">📞 (19) 99999-0000</p>
+    <p class="info-contato">📷 @cafedaesquina</p>
+  </section>
+
+  <section class="cta-final">
+    <h2>Passe por aqui e prove o melhor café do bairro!</h2>
+    <button class="btn-cta-branco">Quero Visitar</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Café da Esquina - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
